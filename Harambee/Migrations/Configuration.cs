@@ -24,6 +24,19 @@
                 new Models.Customer { Name = "Lucky", Surname = "July", Address = "2 Church Street, Sandton" },
                 new Models.Customer { Name = "Zama", Surname = "Zulu", Address = "23 Main Street, Melville" }
                 );
+
+            context.Categorys.AddOrUpdate(c => c.Id,
+                new Models.Category { Name = "TV", Description = "TV" },
+                new Models.Category { Name = "Radio", Description = "Radio" },
+                new Models.Category { Name = "Camera", Description = "Camera" }
+                );
+
+            context.Products.AddOrUpdate(c => c.Id,
+                new Models.Product { Name = "LG TV", Description = "40 inch", Model = "2020", CategoryId = 1 },
+                new Models.Product { Name = "LG Radio", Description = "5 channel", Model = "2021", CategoryId = 2 },
+                new Models.Product { Name = "LG Camera", Description = "DSD", Model = "2020", CategoryId = 3 },
+                new Models.Product { Name = "Apple TV", Description = "40 inch", Model = "2020", CategoryId = 1 }
+                );
         }
     }
 }

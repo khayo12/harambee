@@ -93,6 +93,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -104,9 +105,15 @@
     <Compile Include="Migrations\202105022034085_Initial.designer.cs">
       <DependentUpon>202105022034085_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105022115075_ProductAndCategory.cs" />
+    <Compile Include="Migrations\202105022115075_ProductAndCategory.designer.cs">
+      <DependentUpon>202105022115075_ProductAndCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Context\DatabaseContext.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105022034085_Initial.resx">
       <DependentUpon>202105022034085_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105022115075_ProductAndCategory.resx">
+      <DependentUpon>202105022115075_ProductAndCategory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

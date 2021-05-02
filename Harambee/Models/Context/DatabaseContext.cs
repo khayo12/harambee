@@ -11,5 +11,7 @@ namespace Harambee.Models.Context
         public DatabaseContext() : base("DbConnection") { }
 
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Category> Categorys { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
