@@ -27,7 +27,7 @@ namespace Harambee.Controllers
         [ResponseType(typeof(Product))]
         public IHttpActionResult GetProduct(int id)
         {
-            Product product = db.Products.Find(id);
+            var product = db.Products.Where(p => p.CategoryId == id).ToList();
             if (product == null)
             {
                 return NotFound();
