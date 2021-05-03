@@ -14,5 +14,6 @@ namespace Harambee.Models.Context
         public DbSet<Category> Categorys { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Bundle> Bundles { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
     }
 }
