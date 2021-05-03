@@ -32,10 +32,10 @@
                 );
 
             context.Products.AddOrUpdate(c => c.Id,
-                new Models.Product { Name = "LG TV", Description = "40 inch", Model = "2020", CategoryId = 1 },
-                new Models.Product { Name = "LG Radio", Description = "5 channel", Model = "2021", CategoryId = 2 },
-                new Models.Product { Name = "LG Camera", Description = "DSD", Model = "2020", CategoryId = 3 },
-                new Models.Product { Name = "Apple TV", Description = "40 inch", Model = "2020", CategoryId = 1 }
+                new Models.Product { Name = "LG TV", Description = "40 inch", Model = "2020", Price = 10000.00, CategoryId = 1 },
+                new Models.Product { Name = "LG Radio", Description = "5 channel", Model = "2021", Price = 6000.00, CategoryId = 2 },
+                new Models.Product { Name = "LG Camera", Description = "DSD", Model = "2020", Price = 7000.00, CategoryId = 3 },
+                new Models.Product { Name = "Apple TV", Description = "40 inch", Model = "2020", Price = 21000.00, CategoryId = 1 }
                 );
 
             context.Bundles.AddOrUpdate(c => c.Id,

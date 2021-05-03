@@ -115,6 +115,10 @@
     <Compile Include="Migrations\202105030346520_Bundle.designer.cs">
       <DependentUpon>202105030346520_Bundle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105030406353_ProductPrice.cs" />
+    <Compile Include="Migrations\202105030406353_ProductPrice.designer.cs">
+      <DependentUpon>202105030406353_ProductPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Basket.cs" />
     <Compile Include="Models\Bundle.cs" />
@@ -148,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105030346520_Bundle.resx">
       <DependentUpon>202105030346520_Bundle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105030406353_ProductPrice.resx">
+      <DependentUpon>202105030406353_ProductPrice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
