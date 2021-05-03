@@ -10,6 +10,7 @@ namespace Harambee.Models
     {
         public int Id { get; set; }
         public int Quantity { get; set; }
+        public bool Discount { get; set; }
         [ForeignKey("Customer")]
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }

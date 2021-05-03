@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BL\BasketLogic.cs" />
     <Compile Include="Controllers\BasketsController.cs" />
     <Compile Include="Controllers\BundlesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
@@ -118,6 +119,10 @@
     <Compile Include="Migrations\202105030406353_ProductPrice.cs" />
     <Compile Include="Migrations\202105030406353_ProductPrice.designer.cs">
       <DependentUpon>202105030406353_ProductPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105030426474_BundleDiscount.cs" />
+    <Compile Include="Migrations\202105030426474_BundleDiscount.designer.cs">
+      <DependentUpon>202105030426474_BundleDiscount.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Basket.cs" />
@@ -155,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105030406353_ProductPrice.resx">
       <DependentUpon>202105030406353_ProductPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105030426474_BundleDiscount.resx">
+      <DependentUpon>202105030426474_BundleDiscount.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

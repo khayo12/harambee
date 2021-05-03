@@ -43,8 +43,8 @@
                 );
 
             context.Baskets.AddOrUpdate(c => c.Id,
-                new Models.Basket { CustomerId = 1, ProductId = 1, Quantity = 2 },
-                new Models.Basket { CustomerId = 1, ProductId = 2, Quantity = 1 }
+                new Models.Basket { CustomerId = 1, ProductId = 1, Quantity = 2, Discount = false },
+                new Models.Basket { CustomerId = 1, ProductId = 2, Quantity = 1, Discount = true }
                 );
         }
     }
