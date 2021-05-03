@@ -110,6 +110,10 @@
     <Compile Include="Migrations\202105022115075_ProductAndCategory.designer.cs">
       <DependentUpon>202105022115075_ProductAndCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105030346520_Bundle.cs" />
+    <Compile Include="Migrations\202105030346520_Bundle.designer.cs">
+      <DependentUpon>202105030346520_Bundle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bundle.cs" />
     <Compile Include="Models\Category.cs" />
@@ -139,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105022115075_ProductAndCategory.resx">
       <DependentUpon>202105022115075_ProductAndCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105030346520_Bundle.resx">
+      <DependentUpon>202105030346520_Bundle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

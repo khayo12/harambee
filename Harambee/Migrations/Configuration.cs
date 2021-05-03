@@ -39,7 +39,7 @@
                 );
 
             context.Bundles.AddOrUpdate(c => c.Id,
-                new Models.Bundle { Name = "Lounge", Description = "Lounge" }
+                new Models.Bundle { Name = "Lounge", Description = "Lounge", ProductIds = new System.Collections.Generic.List<int>() { 1, 2 } }
                 );
         }
     }
