@@ -10,6 +10,6 @@ namespace Harambee.Interfaces
     public interface IBasketLogic
     {
         bool CheckBunndle(Basket basket);
-        double CheckValue(Basket basket);
+        double CheckValue(int id);
     }
 }

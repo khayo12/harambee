@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using Harambee.BL;
 using Harambee.Interfaces;
 using Harambee.Models;
 using Harambee.Models.Context;
@@ -17,18 +18,13 @@ namespace Harambee.Controllers
     public class BasketsController : ApiController
     {
         private DatabaseContext db = new DatabaseContext();
+        BasketLogic basketLogic = new BasketLogic();
 
         // GET: api/Baskets/5
         [ResponseType(typeof(Basket))]
-        public IHttpActionResult GetBasket(int id)
+        public double GetBasket(int id)
         {
-            var basket = db.Baskets.Where(c => c.CustomerId == id).ToList();
-            if (basket == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(basket);
+            return basketLogic.CheckValue(id);
         }
                 
         // POST: api/Baskets
@@ -39,8 +35,6 @@ namespace Harambee.Controllers
             {
                 return BadRequest(ModelState);
             }
-
-            IBasketLogic basketLogic = null;
 
             basket.Discount = basketLogic.CheckBunndle(basket);
 

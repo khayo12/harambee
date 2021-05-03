@@ -23,9 +23,29 @@ namespace Harambee.BL
             return false;
         }
 
-        public double CheckValue(Basket basket)
+        public double CheckValue(int id)
         {
-            throw new NotImplementedException();
+            double value = 0.00;
+            Product product = new Product();
+
+            var customerBasket = db.Baskets.Where(c => c.CustomerId == id).ToList();
+
+            if (customerBasket == null)
+            {
+                return value;
+            }
+            
+            foreach(var item in customerBasket)
+            {
+                product = db.Products.Find(item.ProductId);
+                value += product.Price;
+            }
+            var discountItem = customerBasket.Where(c => c.Discount == true);
+            if(discountItem.Any())
+            {
+                value = value * 0.75;
+            }
+            return value;
         }
     }
 }
