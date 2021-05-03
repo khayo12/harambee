@@ -37,6 +37,10 @@
                 new Models.Product { Name = "LG Camera", Description = "DSD", Model = "2020", CategoryId = 3 },
                 new Models.Product { Name = "Apple TV", Description = "40 inch", Model = "2020", CategoryId = 1 }
                 );
+
+            context.Bundles.AddOrUpdate(c => c.Id,
+                new Models.Bundle { Name = "Lounge", Description = "Lounge" }
+                );
         }
     }
 }

@@ -13,5 +13,6 @@ namespace Harambee.Models.Context
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Category> Categorys { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Bundle> Bundles { get; set; }
     }
 }
