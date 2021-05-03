@@ -41,6 +41,11 @@
             context.Bundles.AddOrUpdate(c => c.Id,
                 new Models.Bundle { Name = "Lounge", Description = "Lounge", ProductIds = new System.Collections.Generic.List<int>() { 1, 2 } }
                 );
+
+            context.Baskets.AddOrUpdate(c => c.Id,
+                new Models.Basket { CustomerId = 1, ProductId = 1, Quantity = 2 },
+                new Models.Basket { CustomerId = 1, ProductId = 2, Quantity = 1 }
+                );
         }
     }
 }
