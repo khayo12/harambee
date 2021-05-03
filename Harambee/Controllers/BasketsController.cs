@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using Harambee.Interfaces;
 using Harambee.Models;
 using Harambee.Models.Context;
 
@@ -38,6 +39,10 @@ namespace Harambee.Controllers
             {
                 return BadRequest(ModelState);
             }
+
+            IBasketLogic basketLogic = null;
+
+            basket.Discount = basketLogic.CheckBunndle(basket);
 
             db.Baskets.Add(basket);
             db.SaveChanges();
